@@ -1,0 +1,8 @@
+packages:
+  - "nagam-website"
+  - "nagam-client"
+  - "nagam-admin"
+  - "nagam-super-admin"
+  - "nagam-ui"
+allowBuilds:
+  core-js: true

@@ -1,0 +1,17 @@
+{
+  "name": "nagarconnect-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter nagam-website dev",
+    "dev:all": "pnpm --parallel --filter nagam-website --filter nagam-client --filter nagam-admin --filter nagam-super-admin dev",
+    "dev:website": "pnpm --filter nagam-website dev",
+    "dev:client": "pnpm --filter nagam-client dev",
+    "dev:admin": "pnpm --filter nagam-admin dev",
+    "dev:super-admin": "pnpm --filter nagam-super-admin dev",
+    "dev:backend": "cd nagam-backend && .venv/bin/uvicorn app.main:app --reload --port 8000",
+    "build": "pnpm build:all",
+    "build:ui": "pnpm --filter nagam-ui build",
+    "build:all": "pnpm -r --filter '!nagam-backend' build"
+  }
+}
